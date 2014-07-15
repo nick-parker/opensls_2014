@@ -17,6 +17,6 @@ laser = 500
 for x in range(startx,horiz+startx):
     for y in range(starty,vert+starty):
         output.write('G0 X' + str(x) + ' Y' + str(y)+' F' + str(move)+'\n')
-        output.write('G0 X' + str(x+horiz) + ' Y' + str(y)+' F' + str(laser)+'\n')
+        output.write('G1 X' + str(x+horiz) + ' Y' + str(y)+' F' + str(laser)+'\n')
 output.write('G0 X-200 F3000; turn off laser, done with build')
 output.close()
